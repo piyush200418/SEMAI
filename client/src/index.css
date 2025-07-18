@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+*{
+  font-family: "Outfit", sans-serif;
+}
+
+@theme{
+  --color-primary: #5044E5;
+}
+
+.reset-tw, .reset-tw *{
+  all: revert !important;
+}
+
+.cl-drawerRoot{
+  z-index: 10;
+}
+
+/* Night mode (dark mode) styles */
+.dark {
+  background-color: #18181b;
+  color: #f3f4f6;
+}
+.dark body {
+  background-color: #18181b;
+  color: #f3f4f6;
+}
+.dark .bg-white {
+  background-color: #23232a !important;
+}
+.dark .text-gray-600, .dark .text-gray-700, .dark .text-slate-700 {
+  color: #d1d5db !important;
+}
+.dark .border-gray-200, .dark .border-gray-300, .dark .border-gray-500\/30 {
+  border-color: #333646 !important;
+}
+.dark .bg-primary {
+  background-color: #5044E5 !important;
+}
+.dark .bg-gray-100 {
+  background-color: #23232a !important;
+  color: #f3f4f6 !important;
+}
+.dark .bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, #23232a, #18181b) !important;
+}
+.dark .bg-gradient-to-r {
+  background-image: linear-gradient(to right, #5044E5, #23232a) !important;
+}
+.dark input, .dark textarea {
+  background-color: #23232a !important;
+  color: #f3f4f6 !important;
+  border-color: #333646 !important;
+}
+.dark .border {
+  border-color: #333646 !important;
+}
+.dark .shadow-lg, .dark .shadow-xl {
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.7) !important;
+}
+.dark .rounded-2xl, .dark .rounded-lg, .dark .rounded-full {
+  background-clip: padding-box;
+}
+.dark .hover\:bg-primary:hover {
+  background-color: #5044E5 !important;
+  color: #fff !important;
+}
+
+/* Enhance dark mode for cards and text */
+.dark .bg-white,
+.dark .card,
+.dark .rounded-xl,
+.dark .rounded-lg,
+.dark .max-w-md {
+  background-color: #23232a !important;
+  color: #f3f4f6 !important;
+}
+.dark .border-gray-200,
+.dark .border-gray-300,
+.dark .border-gray-500\/30,
+.dark .border {
+  border-color: #333646 !important;
+}
+.dark .text-gray-600,
+.dark .text-gray-700,
+.dark .text-slate-700,
+.dark .text-slate-600 {
+  color: #d1d5db !important;
+}
+.dark .text-black {
+  color: #f3f4f6 !important;
+}
+.dark .shadow-lg, .dark .shadow-xl {
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.7) !important;
+}
+
+/* Minimal bubbly effect on card hover */
+.card-bubble, .rounded-xl, .rounded-2xl, .rounded-lg, .max-w-md {
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.card-bubble:hover, .rounded-xl:hover, .rounded-2xl:hover, .rounded-lg:hover, .max-w-md:hover {
+  box-shadow: 0 8px 32px 0 rgba(80,68,229,0.10), 0 1.5px 8px 0 rgba(80,68,229,0.08);
+  transform: translateY(-2px) scale(1.025);
+}
+
+/* Night mode: subtle brightness/halo around logo */
+.dark .logo-glow {
+  filter: drop-shadow(0 0 12px #a5b4fc) brightness(1.2);
+  transition: filter 0.3s;
+}
